@@ -9,7 +9,7 @@ from QuoteEngine.QuoteModel import QuoteModel
 
 
 class DocxIngestor(IngestorInterface):
-    """Build DocxIngestor.
+    """Build DocxIngestor..
 
     Ingest and parse.
     """

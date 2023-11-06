@@ -12,7 +12,7 @@ meme = MemeEngine('./static')
 
  
 def setup():
-    """ Load all resources """
+    """ Load all resourcess """
 
     quote_files = ['./_data/DogQuotes/DogQuotesTXT.txt',
                    './_data/DogQuotes/DogQuotesDOCX.docx',
