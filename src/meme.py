@@ -45,9 +45,6 @@ def generate_meme(path=None, body=None, author=None):
 
 
 if __name__ == "__main__":
-    # path - path to an image file
-    # body - quote body to add to the image
-    # author - quote author to add to the image
     args = argparse.ArgumentParser('Parse argument from command')
     args.add_argument('--path', type=pathlib.Path, help='path to an image file')
     args.add_argument('--body', type=str, help='quote body to add to the image')
