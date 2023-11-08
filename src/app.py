@@ -68,7 +68,7 @@ def meme_post():
     if not image_url:
         return render_template('error.html')
     try:
-        tmp_file_path = f'tmp/{os.path.basename(image_url)}'
+        tmp_file_path = f'static/{os.path.basename(image_url)}'
         rq_file = requests.get(image_url)
         with open(tmp_file_path, 'wb') as f:
             f.write(rq_file.content)
@@ -76,9 +76,8 @@ def meme_post():
         path = meme.make_meme(tmp_file_path, body, author)
 
         os.remove(tmp_file_path)
-        path = None
-
-    except:
+        return render_template('meme.html', path=path)
+    except Exception as e:
         return render_template('error.html')
 
 
